@@ -1,7 +1,6 @@
 import React from 'react';
 
-const DropDownList = (string) => {
-  console.log("this.props: ", string.testing)
+const DropDownList = () => {
   return (
     <div className="w3-dropdown-hover">
       <button className="w3-btn w3-red">Hover Over Me!</button>

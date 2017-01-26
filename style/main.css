@@ -1,0 +1,45 @@
+  /*
+   * Layout
+   * ======================================================================== */
+
+  /* max-width-default: 1080px;
+  max-content-width: 1080px;
+  max-content-width-small: 1080px; */
+
+  /*
+   * Padding & Margin
+   * ======================================================================== */
+
+   /* padding: 16px;
+   padding-sm: 8px;
+   padding-lg: 32px;
+   padding-xlg: 64px; */
+
+  /*
+   * Media queries breakpoints
+   * ======================================================================== */
+
+  /* screen-xs-min: 480px;   Extra small screen / phone */
+  /* screen-sm-min: 768px;  /* Small screen / tablet */
+  /* screen-md-min: 992px;  /* Medium screen / desktop */
+  /* screen-lg-min: 1200px; /* Large screen / wide desktop */ 
+
+  body {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .poster-img {
+    opacity: 0.85;
+    border: 1px solid grey;
+    position: relative;
+    top: -150px;
+  }
+
+.main-container {
+  position: relative;
+  top: -400px;
+  background-color: white;
+  border: 1px solid red;
+  min-height: 500px;
+}
