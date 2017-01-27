@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { Header, Image } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
 
 class Nav extends Component {
 
   render() {
     return (
       <div>
-        <Header as='h1'>
+        <Header as='h1' color='orange'>
           Specs
         </Header>
-        <Image className='poster-img' src='./../../assets/ferrari_488_cluster.jpg' />
       </div>
     );
   }

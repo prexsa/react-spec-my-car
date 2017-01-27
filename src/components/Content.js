@@ -9,6 +9,7 @@ class Content extends Component {
     super(props);
 
     this.state = { carData: [] };
+    //console.log('1')
     const ROOT_URL = 'https://api.edmunds.com/api/vehicle/v2/styles/100481925?view=full&fmt=json&api_key=g5zmftujebdv66cbendfjygd';
     axios.get(ROOT_URL)
       .then(res => {
@@ -19,12 +20,18 @@ class Content extends Component {
       .catch(function(err) {
         console.log(err);
       });
+
+      // const data = this.state.carData;
+      // console.log('2', data);
   }
 
   render() {
+    if(Array.isArray(this.state.carData)) {
+      return <div>Loading...</div>
+    }
     return (
       <div className='main-container'>
-        <Header as='h2'>E46 M3 Specs</Header>
+        <Header as='h2' >E46 M3 Specs</Header>
         <ul className="w3-list">
           <li>Get everything to work with one car, E46 M3</li>
           <li>Side Nav, Specs, Gallery, Gear Ratio Graph</li>

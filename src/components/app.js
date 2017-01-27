@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-
+import { Image } from 'semantic-ui-react';
 import Nav from './Nav';
-import DropDownList from './DropDownList';
 import Content from './Content';
 
 export default class App extends Component {
@@ -10,6 +9,7 @@ export default class App extends Component {
       <div>
         {this.props.children}
         <Nav />
+        <Image className='poster-img' src='./../../assets/ferrari_488_cluster.jpg' />
         <Content />
       </div>
     );

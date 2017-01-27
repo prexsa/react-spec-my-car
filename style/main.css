@@ -24,22 +24,22 @@
   /* screen-md-min: 992px;  /* Medium screen / desktop */
   /* screen-lg-min: 1200px; /* Large screen / wide desktop */ 
 
-  body {
-    max-width: 1080px;
-    margin: 0 auto;
-  }
+body {
+  max-width: 1080px;
+  margin: 0 auto;
+}
 
-  .poster-img {
-    opacity: 0.85;
-    border: 1px solid grey;
-    position: relative;
-    top: -150px;
-  }
+.poster-img {
+  opacity: 0.85;
+  border: 1px solid grey;
+  position: relative;
+  top: -150px;
+}
 
 .main-container {
   position: relative;
   top: -400px;
   background-color: white;
-  border: 1px solid red;
   min-height: 500px;
+  padding: 10px 0 0 10px;
 }
