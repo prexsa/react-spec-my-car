@@ -7,6 +7,9 @@ class Layout extends Component {
     console.log("Layout 1: ", data);
     const categories = data.categories.market.split(',');
     const engine = data.engine;
+    const options = data.options[0].options;
+
+    // console.log('top options: ', options);
 
     return (
       <Container>
@@ -62,6 +65,16 @@ class Layout extends Component {
           Configuration
             <Label.Detail>{engine.configuration + " " + engine.cylinder}</Label.Detail>
         </Label>
+
+        <Divider hidden/>
+
+        <h4>Options Offered</h4>
+
+        {
+          options.map((option) => {
+            return (<Label key={option.name}>{option.name}</Label>)
+          })
+        }
 
       </Container>
     )
