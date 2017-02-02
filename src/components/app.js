@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Image } from 'semantic-ui-react';
 import Navigation from './Navigation';
-import Content from './Content';
 
 export default class App extends Component {
   render() {
@@ -11,7 +10,6 @@ export default class App extends Component {
         <div className="main-container">
           <Navigation />
           {this.props.children}
-          Testing
         </div>
       </div>
     );

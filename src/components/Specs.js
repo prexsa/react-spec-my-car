@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Header } from 'semantic-ui-react';
 import Layout from './Layout';
+import HorizontalBarChart from './HorizontalBarChart';
 
 
 class Specs extends Component {
@@ -24,17 +25,37 @@ class Specs extends Component {
     if(Array.isArray(this.state.carData)) {
       return <div>Loading...</div>
     }
+
+    var data = {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    }
     return (
       <div>
+        <HorizontalBarChart data={data} />
         <Header as='h2' >E46 M3 Specs</Header>
-        <ul className="w3-list">
-          <li>Get everything to work with one car, E46 M3</li>
-          <li>Side Nav, Specs, Gallery, Gear Ratio Graph</li>
-        </ul>
-        <div>
-          Number One Programmer in the west coast, son!
-          <Layout data={this.state.carData}/>
-        </div>
+        Gear Ratio Graph
+        <Layout data={this.state.carData}/>
       </div>
     );
   }
