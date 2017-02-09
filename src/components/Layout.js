@@ -4,7 +4,7 @@ import { Container, Divider, Label } from 'semantic-ui-react';
 class Layout extends Component {
   render() {
     const data = this.props.data;
-    console.log("Layout 1: ", data);
+    // console.log("Layout 1: ", data);
     const categories = data.categories.market.split(',');
     const engine = data.engine;
     const options = data.options[0].options;

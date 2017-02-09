@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Header } from 'semantic-ui-react';
 import Layout from './Layout';
-import HorizontalBarChart from './HorizontalBarChart';
+import D3HorizontalBar from './D3HorizontalBarChart';
+
 
 
 class Specs extends Component {
@@ -25,11 +26,11 @@ class Specs extends Component {
     if(Array.isArray(this.state.carData)) {
       return <div>Loading...</div>
     }
-
+// http://plnkr.co/edit/XNsDCqZsUUajBH6Y1sNY?p=preview
     var data = {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
+        labels: [1,2,3,4,5,6].reverse(),
+         datasets: [{
+            label: 'E46 M3 Gear Ratio',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -52,7 +53,7 @@ class Specs extends Component {
     }
     return (
       <div>
-        <HorizontalBarChart data={data} />
+        <D3HorizontalBar />
         <Header as='h2' >E46 M3 Specs</Header>
         Gear Ratio Graph
         <Layout data={this.state.carData}/>

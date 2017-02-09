@@ -43,3 +43,11 @@ body {
   min-height: 500px;
   padding: 10px 0 0 10px;
 }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
