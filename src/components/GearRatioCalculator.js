@@ -12,19 +12,16 @@ const GearRatioCalculator = (() => {
   let gears = [4.23, 2.53, 1.67, 1.23, 1.00, 0.83];
 
   gears.map((gearRatio, i) => {
-    console.log(gearRatio);
-
     let oneThousand = (1000 * tireDiameter) / (finalDriveRatio * gearRatio * vehicleMPH);
     let eightThousand = (8000 * tireDiameter) / (finalDriveRatio * gearRatio * vehicleMPH);
 
     let rpm = {
-      '1k': oneThousand,
-      '8k': eightThousand
+      'one': oneThousand,
+      'eight': eightThousand
     }
 
     dataSet.push(rpm);
   })
-  console.log('dataSet: ', dataSet );
   return dataSet;
 
 })();
