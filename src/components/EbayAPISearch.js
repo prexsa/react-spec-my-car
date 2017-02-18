@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import ebay from '../../config.js';
-
 
 class EbayApiSearch extends Component {
   constructor(props) {
@@ -12,7 +9,6 @@ class EbayApiSearch extends Component {
     return(
       <div>
       Ebay Search
-      {resp}
       </div>
     )
   }
