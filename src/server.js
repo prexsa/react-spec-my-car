@@ -20,10 +20,14 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('*', function(req, res){
+app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 })
 
+app.get('/parts', function(req, res) {
+  console.log('parts: ', req.body);
+  res.send("parts");
+})
 
 app.listen(port, function onAppListening(err) {
   if (err) {

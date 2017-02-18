@@ -32,7 +32,7 @@ class Specs extends Component {
       <EbaySearch />
         <Header as='h2' >E46 M3 Specs</Header>
         Gear Ratio Graph
-        <Layout data={this.state.carData}/>
+        <Layout data={this.state.carData} />
       </div>
     );
   }

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default () => {
-  return (
-    <div>
-      show categories of parts pertaining to that specific vehicle from Ebay and Amazon
-    </div>
-  );
+class Parts extends Component {
+  render() {
+    return (
+      <div>
+        show categories of parts pertaining to that specific vehicle from Ebay and Amazon
+      </div>
+    );
+  }
 };
+
+export default Parts;

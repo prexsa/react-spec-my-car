@@ -8,9 +8,9 @@ import Parts from './components/Parts';
 
 ReactDOM.render(
   <Router history={browserHistory}>
-    <Route path='/' component={Specs}>
-      <Route path='specs' component={Specs} />
-      <Route path='parts' component={Parts} />
+    <Route path='/' component={App}>
+      <Route path='/specs' component={Specs} />
+      <Route path='/parts' component={Parts} />
     </Route>
   </Router>
   , document.querySelector('.container'));
